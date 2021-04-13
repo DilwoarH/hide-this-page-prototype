@@ -1,43 +1,50 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Question page
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({}) }}
+  {% include "./hide-this-page/hide-this-page-component.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <h1 class="govuk-heading-xl">Heading or question goes here</h1>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <form class="form" action="/url/of/next/page" method="post">
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+        <p>[Insert question content here]</p>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+ <h1 class="govuk-heading-xl">Cookies</h1>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <p>The GOV.UK Prototype Kit puts small files (known as ‘cookies’) on to your computer.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
+      <p>We use cookies to make prototypes work as well as possible.</p>
+
+      <p>These cookies aren’t used to identify you personally.</p>
+
+      <p><a href="https://ico.org.uk/for-the-public/online/cookies/">Find out how to manage cookies</a>.</p>
+
+      <h2 class="govuk-heading-l">Storing users' answers within prototypes</h2>
+
+      <p>To help prototypes work as well as possible, each prototype stores a cookie to remember what users select on question pages.</p>
+      
+      <p>This allows prototypes to have branching pages and show users' answers on pages like the 'Check your answers' summary page.</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
     </div>
   </div>
 
